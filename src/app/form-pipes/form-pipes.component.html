@@ -1,0 +1,40 @@
+<h4>{{ currentDate | date: 'medium' }}</h4>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+        @for (alumno of alumnos; track $index) {
+            <tr>
+                <th scope="row">{{alumno.nombre}}</th>
+                <td>{{alumno.nombre | titlecase}}</td>
+                <td>{{alumno.nombre | uppercase}}</td>
+                <td>{{alumno.nombre | lowercase}}</td>
+              </tr> 
+        }
+    </tbody>
+  </table>
+
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Curso</th>
+        <th scope="col">Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+        @for (curso of cursos; track $index) {
+            <tr>
+                <th scope="row">{{curso.nombre}}</th>
+                <td>{{curso.precio | currency:'S/.'}}</td>
+              </tr> 
+        }
+    </tbody>
+  </table>

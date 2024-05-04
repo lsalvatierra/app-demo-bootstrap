@@ -1,0 +1,12 @@
+<h1>{{curso.nombre}}</h1>
+<h1>{{contador}}</h1>
+<h2>{{titulo}}</h2>
+<img src="{{curso.imagen}}" alt="">
+<img [src]="curso.imagen" alt="">
+<br>
+<button (click)="cambiarNombreCurso1('Nuevo curso')">Cambiar curso</button>
+<br>
+<input type="text" placeholder="Ingrese su nombre" 
+[value]="curso.nombre">
+<!--[(ngModel)]="curso.nombre" width="100%">-->
+<button (click)="cambiarNombreCurso2()">Guardar</button>
